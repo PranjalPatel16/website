@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Product - Bottoms</title>
+    </head>
+    <style>
+        body{
+            background-color:floralwhite;
+            font-size: larger;
+            font-family: Arial, sans-serif;
+            margin: 0%;
+        }
+        h2{
+            color: rgb(11, 11, 11);
+        }
+        .j1{
+            display: flex;
+            gap: 10px;
+            margin-left: 0%;
+        }
+        .content{
+            color:black;
+            gap: 5px;
+        }
+        .t2{
+            display:flex;
+            gap:10px;
+        }
+        .j2{
+            color:black;
+        }
+    </style>
+    <body>
+        <h2>Bottoms - 1,000 to 4,000 Rupees</h2>
+        <div class="j1">
+        <div class="content">
+            <img src="j1.jpeg" width="200" alt="">
+            <p>Price: &#8377; 1,500</p>
+            <button type="addToCart('j1.jpeg')">
+                Add to Cart</button>  
+            <p></p> 
+        </div>
+        <div class="content">
+            <img src="j2.jpeg" width="200" alt=""> 
+            <p>Price: &#8377; 2,000</p>
+            <button type="addToCart('j2.jpeg')">Add to Cart</button>  
+            <p></p> 
+        </div>
+        <div class="content">
+            <img src="j6.jpeg" width="200" alt="">
+            <p>Price: &#8377; 1,500</p>
+            <button type="addToCart('j6.jpeg')">Add to Cart</button>  
+            <p></p> 
+        </div>
+        <div class="content">
+            <img src="j3.jpeg" width="200" alt="">
+            <p>Price: &#8377; 2,500</p>
+            <button type="addToCart('j3.jpeg')">Add to Cart</button>  
+            <p></p> 
+        </div>
+        <div class="content">
+            <img src="j7.jpeg" width="200" alt="">
+            <p>Price: &#8377; 3,000</p>
+            <button onclick="addToCart('j7.jpeg')">Add to Cart</button>  
+            <p></p> 
+        </div>
+        <div class="content">
+            <img src="j5.jpeg" width="200" alt="">
+            <p>Price: &#8377; 1,000</p>
+            <button onclick="addToCart('j5.jpeg')">Add to Cart</button>  
+            <p></p> 
+        </div>
+        <div class="content">
+            <img src="j8.jpeg" width="200" alt="">
+            <p>Price: &#8377; 4,000</p>
+            <button onclick="addToCart('j8.jpeg')">Add to Cart</button>  
+            <p></p> 
+        </div>
+        </div>
+        <div class="t2">
+            <div class="j2">
+            <img src="j4.jpeg" width="200" alt="">
+            <p>Price: &#8377; 2,500</p>
+            <button onclick="addToCart('t4.jpeg')">Add to Cart</button>  
+            <p></p> 
+        </div>
+        <div class="j2">
+            <img src="j9.jpeg" width="200" alt="">
+            <p>Price: &#8377; 2,490</p>
+            <button onclick="addToCart('j9.jpeg')">Add to Cart</button>  
+            <p></p> 
+        </div>
+        <div class="j2">
+            <img src="j10.jpeg" width="200" alt="">
+            <p>Price: &#8377; 3,000</p>
+            <button onclick="addToCart('j10.jpeg')">Add to Cart</button>  
+            <p></p> 
+        </div>
+        <div class="j2">
+            <img src="j11.jpeg" width="200" alt="">
+            <p>Price: &#8377; 4,000</p>
+            <button onclick="addToCart('j11.jpeg')">Add to Cart</button>  
+            <p></p> 
+        </div>
+        <div class="j2">
+            <img src="j13.jpeg" width="200" alt="">
+            <p>Price: &#8377; 3,690</p>
+            <button onclick="addToCart('j13.jpeg')">Add to Cart</button>  
+            <p></p> 
+        </div>
+        <div class="j2">
+            <img src="j12.jpeg" width="200" alt="">
+            <p>Price: &#8377; 2,600</p>
+            <button onclick="addToCart('j12.jpeg')">Add to Cart</button>  
+            <p></p> 
+        </div>
+        <div class="j2">
+            <img src="j14.jpeg" width="200" alt="">
+            <p>Price: &#8377; 3,750</p>
+            <button onclick="addToCart('j14.jpeg')">Add to Cart</button>  
+            <p></p> 
+        </div>
+        </div>
+         <script>
+    function addToCart(image, price) {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cart.push({ image: image, price: price });
+        localStorage.setItem("cart", JSON.stringify(cart));
+        alert("Item added to cart!");
+       
+    }
+</script>
+    </body>
+</html>

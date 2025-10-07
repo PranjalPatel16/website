@@ -1,0 +1,373 @@
+<!--<!DOCTYPE html>
+<html>
+<head>
+    <title>FAQs - Summerwear</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffe6f0;
+            color: #4a0033;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #ff4da6;
+            padding: 20px 0;
+            text-align: center;
+            color: white;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff0f5;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 105, 180, 0.2);
+        }
+
+        .faq-item {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #ffcce0;
+        }
+
+        .faq-item p {
+            margin: 5px 0;
+            font-size: 18px;
+        }
+
+        .question {
+            font-weight: bold;
+            color: #d63384;
+        }
+
+        .answer {
+            padding-left: 10px;
+        }
+
+        .input-section {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        input[type="text"] {
+            width: 70%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 6px;
+            border: 1px solid #ffb3d9;
+        }
+
+        button {
+            background-color: #ff4da6;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        button:hover {
+            background-color: #e60073;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Frequently Asked Questions</h1>
+    </header>
+
+    <div class="container" id="faqContainer">
+        
+        <div class="faq-item">
+            <p class="question">Q: What sizes are available?</p>
+            <p class="answer">A: Sizes range from XS to XXL for all items.</p>
+        </div>
+
+        <div class="faq-item">
+            <p class="question">Q: How long does delivery take?</p>
+            <p class="answer">A: Delivery usually takes 3-7 business days depending on your location.</p>
+        </div>
+
+        <div class="faq-item">
+            <p class="question">Q: Do you offer international shipping?</p>
+            <p class="answer">A: Currently, we only ship within India.</p>
+        </div>
+
+        <div class="faq-item">
+            <p class="question">Q: Can I return or exchange an item?</p>
+            <p class="answer">A: Yes, returns and exchanges are accepted within 7 days of delivery. Items must be unworn and in original packaging.</p>
+        </div>
+
+        <div class="faq-item">
+            <p class="question">Q: Are the materials eco-friendly?</p>
+            <p class="answer">A: We prioritize sustainability by using organic cotton and recycled fabrics wherever possible.</p>
+        </div>
+
+        <div class="faq-item">
+            <p class="question">Q: How can I track my order?</p>
+            <p class="answer">A: Once your order ships, a tracking link will be emailed to you.</p>
+        </div>
+    </div>
+
+    <div class="input-section">
+        <input type="text" id="userQuestion" placeholder="Ask a question..." />
+        <button onclick="addFAQ()">Submit</button>
+    </div>
+
+    <script>
+        function getAnswer(question) {
+            question = question.toLowerCase();
+
+            if (question.includes("size")) {
+                return "Sizes range from XS to XXL for all items.";
+            } else if (question.includes("delivery") || question.includes("shipping time")) {
+                return "Delivery usually takes 3-7 business days depending on your location.";
+            } else if (question.includes("international")) {
+                return "Currently, we only ship within India.";
+            } else if (question.includes("return") || question.includes("exchange")) {
+                return "Yes, returns and exchanges are accepted within 7 days of delivery.";
+            } else if (question.includes("eco") || question.includes("material")) {
+                return "We prioritize sustainability by using organic cotton and recycled fabrics.";
+            } else if (question.includes("track")) {
+                return "A tracking link will be emailed to you once your order ships.";
+            } else {
+                return "Thanks for your question! We'll get back to you soon.";
+            }
+        }
+
+        function addFAQ() {
+            const input = document.getElementById("userQuestion");
+            const questionText = input.value.trim();
+
+            if (questionText === "") {
+                alert("Please enter a question.");
+                return;
+            }
+
+            const answerText = getAnswer(questionText);
+
+            const container = document.getElementById("faqContainer");
+
+            const faqDiv = document.createElement("div");
+            faqDiv.className = "faq-item";
+            faqDiv.innerHTML = `
+                <p class="question">Q: ${questionText}</p>
+                <p class="answer">A: ${answerText}</p>
+            `;
+
+            container.appendChild(faqDiv);
+            input.value = "";
+        }
+    </script>
+
+</body>
+</html>-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FAQs - Summerwear</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffe6f0;
+            color: #4a0033;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #ff4da6;
+            padding: 20px 0;
+            text-align: center;
+            color: white;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff0f5;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 105, 180, 0.2);
+        }
+
+        .faq-item {
+            margin-bottom: 15px;
+            border-bottom: 1px solid #ffcce0;
+        }
+
+        .faq-question {
+            font-weight: bold;
+            color: #d63384;
+            font-size: 18px;
+            cursor: pointer;
+            padding: 10px 0;
+            transition: 0.3s ease;
+        }
+
+        .faq-answer {
+            display: none;
+            font-size: 16px;
+            padding: 5px 0 15px 10px;
+        }
+
+        .faq-question:hover {
+            text-decoration: underline;
+        }
+
+        .input-section {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        input[type="text"] {
+            width: 70%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 6px;
+            border: 1px solid #ffb3d9;
+        }
+
+        button {
+            background-color: #ff4da6;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        button:hover {
+            background-color: #e60073;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Frequently Asked Questions</h1>
+    </header>
+
+    <div class="container" id="faqContainer">
+        <!-- Static FAQs -->
+        <div class="faq-item">
+            <div class="faq-question">Q: What sizes are available?</div>
+            <div class="faq-answer">A: Sizes range from XS to XXL for all items.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Q: How long does delivery take?</div>
+            <div class="faq-answer">A: Delivery usually takes 3-7 business days depending on your location.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Q: Do you offer international shipping?</div>
+            <div class="faq-answer">A: Currently, we only ship within India.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Q: Can I return or exchange an item?</div>
+            <div class="faq-answer">A: Yes, returns and exchanges are accepted within 7 days of delivery.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Q: Are the materials eco-friendly?</div>
+            <div class="faq-answer">A: We prioritize sustainability by using organic cotton and recycled fabrics wherever possible.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Q: How can I track my order?</div>
+            <div class="faq-answer">A: Once your order ships, a tracking link will be emailed to you.</div>
+        </div>
+    </div>
+
+    <div class="input-section">
+        <input type="text" id="userQuestion" placeholder="Ask a question..." />
+        <button onclick="addFAQ()">Submit</button>
+    </div>
+
+    <script>
+        // Toggle answer visibility
+        document.querySelectorAll(".faq-question").forEach(q => {
+            q.addEventListener("click", () => {
+                const answer = q.nextElementSibling;
+                answer.style.display = answer.style.display === "block" ? "none" : "block";
+            });
+        });
+
+        function getAnswer(question) {
+            question = question.toLowerCase();
+
+            if (question.includes("size")) {
+                return "Sizes range from XS to XXL for all items.";
+            } else if (question.includes("delivery") || question.includes("shipping time")) {
+                return "Delivery usually takes 3-7 business days depending on your location.";
+            } else if (question.includes("international")) {
+                return "Currently, we only ship within India.";
+            } else if (question.includes("return") || question.includes("exchange")) {
+                return "Yes, returns and exchanges are accepted within 7 days of delivery.";
+            } else if (question.includes("eco") || question.includes("material")) {
+                return "We prioritize sustainability by using organic cotton and recycled fabrics.";
+            } else if (question.includes("track")) {
+                return "A tracking link will be emailed to you once your order ships.";
+            } else {
+                return "Thanks for your question! We'll get back to you soon.";
+            }
+        }
+
+        function addFAQ() {
+            const input = document.getElementById("userQuestion");
+            const questionText = input.value.trim();
+
+            if (questionText === "") {
+                alert("Please enter a question.");
+                return;
+            }
+
+            const answerText = getAnswer(questionText);
+
+            const container = document.getElementById("faqContainer");
+
+            const faqDiv = document.createElement("div");
+            faqDiv.className = "faq-item";
+            faqDiv.innerHTML = ` 
+                <div class="faq-question">Q: ${questionText}</div>
+                <div class="faq-answer">A: ${answerText}</div>
+            `;
+
+            container.appendChild(faqDiv);
+
+            // Add event listener for new question
+            faqDiv.querySelector(".faq-question").addEventListener("click", function () {
+                const answer = this.nextElementSibling;
+                answer.style.display = answer.style.display === "block" ? "none" : "block";
+            });
+
+            // Show popup confirmation
+            alert("Your question has been submitted!");
+
+            input.value = "";
+        }
+    </script>
+
+</body>
+</html>
+

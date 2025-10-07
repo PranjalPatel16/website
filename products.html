@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Summerwear - Products</title>
+  <style>
+    body {
+      background-color: ghostwhite;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      text-align: center;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 600px;
+      width: 100%;
+    }
+
+    h1 {
+      color: rgb(252, 36, 169);
+      margin-bottom: 40px;
+      font-weight: 700;
+      font-size: 2.8rem;
+      letter-spacing: 1px;
+    }
+    ul.product-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    ul.product-list li {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgb(252 36 169 / 0.15);
+      margin-bottom: 25px;
+      padding: 20px 25px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    ul.product-list li:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgb(252 36 169 / 0.3);
+    }
+    ul.product-list li a {
+      text-decoration: none;
+      color: rgb(252, 36, 169);
+      font-size: 1.3rem;
+      font-weight: 600;
+      display: inline-block;
+      transition: color 0.3s ease;
+    }
+
+    ul.product-list li a:hover {
+      color: rgb(255, 96, 154);
+      text-decoration: underline;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Our Products</h1>
+    <ul class="product-list">
+      <li><a href="product1.html">Dresses - 2,000 to 7,000 Rupees</a></li>
+      <li><a href="product2.html">Corsets - 500 to 2,000 Rupees</a></li>
+      <li><a href="product3.html">T-shirts - 500 to 1,000 Rupees</a></li>
+      <li><a href="product4.html">Bottoms - 1,000 to 4,000 Rupees</a></li>
+    </ul>
+  </div>
+</body>
+</html>

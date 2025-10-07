@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Contact Summerwear</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #fff0f5; /* Light pink background */
+            margin: 0;
+            padding: 0;
+            color: #444;
+        }
+
+        header {
+            background-color: #ffc0cb; /* Soft pink */
+            padding: 30px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        main {
+            padding: 40px 20px;
+            max-width: 600px;
+            margin: 40px auto;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(255, 192, 203, 0.4);
+        }
+
+        h2 {
+            color: #d6336c;
+            margin-top: 0;
+        }
+
+        p {
+            font-size: 1.1em;
+            margin: 10px 0;
+        }
+
+        a {
+            color: #d6336c;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        form {
+            margin-top: 30px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 500;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ffc0cb;
+            border-radius: 8px;
+            font-size: 1em;
+            background-color: #fffafa;
+        }
+
+        button {
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 1em;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background-color: #e75480;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contact Summerwear</h1>
+    </header>
+    <main>
+        <h2>We'd love to hear from you!</h2>
+        <p>Email: <a href="mailto:support@summerwear.com">support@summerwear.com</a></p>
+        <p>Phone: <a href="tel:+919824366979">+91 98243 66979</a></p>
+
+        <form action="#" method="post">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </main>
+
+</body>
+</html>
+
+
+  

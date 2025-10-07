@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feedback - Summerwear</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            max-width: 500px;
+        }
+
+        form {
+            background-color: #f9f9f9;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+            text-align: left;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 15px;
+        }
+
+        input[type="text"],
+        input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #000;
+            border-radius: 5px;
+            background-color: #fff;
+            color: #000;
+        }
+
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #000;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Customer Feedback</h1>
+    <p>We value your opinion! Please fill out the form below to share your feedback with us.</p>
+
+    <form action="submit_feedback.php" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="orderId">Order ID (if any):</label>
+        <input type="text" id="orderId" name="orderId">
+
+        <label>Rate Your Experience:</label>
+        <input type="radio" id="excellent" name="rating" value="Excellent">
+        <label for="excellent">Excellent</label><br>
+        <input type="radio" id="good" name="rating" value="Good">
+        <label for="good">Good</label><br>
+        <input type="radio" id="average" name="rating" value="Average">
+        <label for="average">Average</label><br>
+        <input type="radio" id="poor" name="rating" value="Poor">
+        <label for="poor">Poor</label><br>
+
+        <input type="submit" value="Submit Feedback">
+    </form>
+
+    <p>Thank you for shopping with us!</p>
+</body>
+</html>

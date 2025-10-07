@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login to Summerwear</title>
+    <style>
+        body {
+            background-color: #faf9f9;
+            color: rgb(252, 34, 125);
+            font-family: Arial, sans-serif;
+            height: 95vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container { width: 320px; }
+        h2 { margin-bottom: 20px; color: rgb(252, 34, 125); text-align: center; }
+        form {
+            width: 300px;
+            padding: 30px;
+            background: rgb(255, 209, 217);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%; padding: 10px; margin-top: 5px; margin-bottom: 15px;
+            border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box;
+        }
+        input[type="submit"] {
+            width: 100%; padding: 10px; background-color: rgb(252, 34, 125);
+            color: rgb(245, 242, 244); border: none; border-radius: 5px;
+            font-weight: bold; cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Login</h2>
+        <form id="loginform" action="login.php" method="POST">
+            Username:<br>
+
+            <input type="text" id="username" name="username" required><br>
+            Password:<br>
+            <input type="password" id="password" name="password" required><br><br>
+            <label>
+    <input type="checkbox" name="remember"> Remember Me
+</label>
+
+            <input type="submit" value="Login">
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("loginform").addEventListener("submit", function (e) {
+            const username = document.getElementById("username").value.trim();
+            const password = document.getElementById("password").value;
+
+            if (username === "") {
+                alert("Username cannot be empty.");
+                e.preventDefault();
+                return;
+            }
+            const usernamePattern = /^[a-zA-Z0-9_]{4,}$/;
+            if (!usernamePattern.test(username)) {
+                alert("Username must be at least 4 characters long and contain only letters, numbers, or underscores.");
+                e.preventDefault();
+                return;
+            }
+            const passwordPattern = /^(?=.*\d)(?=.*[!@#$%^&*]).{6,}$/;
+            if (!passwordPattern.test(password)) {
+                alert("Password must be at least 6 characters long, include at least one number and one special character (!@#$%^&*).");
+                e.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+CREATE TABLE Guests (
+    guest_id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    contact VARCHAR(15) NOT NULL
+);
+
+CREATE TABLE Bookings (
+    booking_id INT AUTO_INCREMENT PRIMARY KEY,
+    guest_id INT NOT NULL,
+    room_type ENUM('Standard', 'Deluxe', 'Suite') NOT NULL,
+    check_in DATE NOT NULL,
+    status ENUM('Booked', 'Cancelled') NOT NULL,
+    FOREIGN KEY (guest_id) REFERENCES Guests(guest_id)
+);
+
+
+INSERT INTO Guests (name, contact)
+VALUES ('Ravi Patel', '9876543210');
+
+
+INSERT INTO Bookings (guest_id, room_type, check_in, status)
+VALUES (1, 'Deluxe', '2025-09-20', 'Booked');
+
+
+SELECT 
+    b.booking_id,
+    g.name,
+    g.contact,
+    b.room_type,
+    b.check_in,
+    b.status
+FROM Bookings b
+JOIN Guests g ON b.guest_id = g.guest_id;
+
+
+UPDATE Bookings
+SET status = 'Cancelled'
+WHERE booking_id = 1;
